@@ -88,6 +88,11 @@ body {
   min-width: 200px;
 }
 
+.species-search {
+  margin-top: 8px;
+  width: 100%;
+}
+
 .field label {
   font-size: 0.75rem;
   font-weight: 500;
@@ -103,6 +108,7 @@ body {
 }
 
 input[type="number"],
+input[type="search"],
 select {
   font: inherit;
   color: var(--text);
@@ -115,11 +121,13 @@ select {
 }
 
 input[type="number"]:hover,
+input[type="search"]:hover,
 select:hover {
   border-color: var(--border-strong);
 }
 
 input[type="number"]:focus,
+input[type="search"]:focus,
 select:focus {
   border-color: var(--link);
   box-shadow: 0 0 0 3px var(--focus);

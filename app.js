@@ -7,6 +7,7 @@
   const boardWidthEl = document.getElementById("boardWidth");
   const moistureEl = document.getElementById("moistureVariance");
   const highlightEl = document.getElementById("speciesHighlight");
+  const speciesSearchEl = document.getElementById("speciesSearch");
   const tbody = document.getElementById("speciesBody");
   const highlightSummaryEl = document.getElementById("highlightSummary");
   const highlightSummaryNameEl = document.getElementById("highlightSummaryName");
@@ -149,23 +150,46 @@
     tbody.replaceChildren(frag);
   }
 
+  function highlightFilterQuery() {
+    if (!speciesSearchEl) return "";
+    return String(speciesSearchEl.value).trim().toLowerCase();
+  }
+
+  /**
+   * Rebuilds highlight select options. Optional filter narrows by species name (substring, case-insensitive).
+   * Option values remain global species indices so the table and summary stay aligned.
+   * @returns {boolean} true if the previous selection is still valid after rebuild
+   */
   function fillHighlightOptions() {
+    const q = highlightFilterQuery();
     const current = highlightEl.value;
     const frag = document.createDocumentFragment();
     const none = document.createElement("option");
     none.value = "";
     none.textContent = "— None —";
     frag.appendChild(none);
+
+    let keptSelection = false;
     for (let i = 0; i < species.length; i++) {
+      if (q && !species[i].name.toLowerCase().includes(q)) continue;
       const opt = document.createElement("option");
       opt.value = String(i);
       opt.textContent = species[i].name;
       frag.appendChild(opt);
+      if (current !== "" && current === String(i)) keptSelection = true;
     }
+
     highlightEl.replaceChildren(frag);
-    if (current !== "" && species[Number(current)]) {
+    if (current !== "" && keptSelection) {
       highlightEl.value = current;
+      return true;
     }
+    if (current !== "") {
+      highlightEl.value = "";
+      return false;
+    }
+    highlightEl.value = "";
+    return true;
   }
 
   async function init() {
@@ -183,6 +207,17 @@
     boardWidthEl.addEventListener("input", scheduleRender);
     moistureEl.addEventListener("input", scheduleRender);
     highlightEl.addEventListener("change", render);
+
+    const scheduleFilter = debounce(function () {
+      const prev = highlightEl.value;
+      const stillValid = fillHighlightOptions();
+      if (prev !== "" && !stillValid) {
+        render();
+      }
+    }, 80);
+    if (speciesSearchEl) {
+      speciesSearchEl.addEventListener("input", scheduleFilter);
+    }
   }
 
   init().catch(function (err) {
