@@ -50,6 +50,34 @@
         </div>
       </section>
 
+      <section
+        id="highlightSummary"
+        class="panel highlight-summary"
+        hidden
+        aria-live="polite"
+        aria-label="Highlighted species details"
+      >
+        <h2 class="highlight-summary__name" id="highlightSummaryName"></h2>
+        <dl class="highlight-summary__stats">
+          <div class="highlight-summary__pair">
+            <dt>Quarter</dt>
+            <dd id="hsQuarterCoeff"></dd>
+          </div>
+          <div class="highlight-summary__pair">
+            <dt>Flat</dt>
+            <dd id="hsFlatCoeff"></dd>
+          </div>
+          <div class="highlight-summary__pair">
+            <dt>Movement (quarter)</dt>
+            <dd id="hsMoveQuarter"></dd>
+          </div>
+          <div class="highlight-summary__pair">
+            <dt>Movement (flat)</dt>
+            <dd id="hsMoveFlat"></dd>
+          </div>
+        </dl>
+      </section>
+
       <section class="panel table-wrap" aria-label="Results table">
         <div class="table-scroll">
           <table class="data-table">

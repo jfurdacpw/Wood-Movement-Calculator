@@ -8,6 +8,12 @@
   const moistureEl = document.getElementById("moistureVariance");
   const highlightEl = document.getElementById("speciesHighlight");
   const tbody = document.getElementById("speciesBody");
+  const highlightSummaryEl = document.getElementById("highlightSummary");
+  const highlightSummaryNameEl = document.getElementById("highlightSummaryName");
+  const hsQuarterCoeffEl = document.getElementById("hsQuarterCoeff");
+  const hsFlatCoeffEl = document.getElementById("hsFlatCoeff");
+  const hsMoveQuarterEl = document.getElementById("hsMoveQuarter");
+  const hsMoveFlatEl = document.getElementById("hsMoveFlat");
 
   function parsePositiveNumber(el, fallback) {
     const v = parseFloat(String(el.value).replace(",", "."), 10);
@@ -33,10 +39,28 @@
     return { quarter: mq, flat: mf };
   }
 
+  function updateHighlightSummary(w, m, highlight) {
+    const idx = highlight === "" ? NaN : Number(highlight);
+    const row = Number.isInteger(idx) && idx >= 0 && idx < species.length ? species[idx] : null;
+    if (!row) {
+      highlightSummaryEl.hidden = true;
+      return;
+    }
+    const { quarter: mq, flat: mf } = movement(row.quarter, row.flat, w, m);
+    highlightSummaryNameEl.textContent = row.name;
+    hsQuarterCoeffEl.textContent = formatCoeff(row.quarter);
+    hsFlatCoeffEl.textContent = formatCoeff(row.flat);
+    hsMoveQuarterEl.textContent = formatMovement(mq);
+    hsMoveFlatEl.textContent = formatMovement(mf);
+    highlightSummaryEl.hidden = false;
+  }
+
   function render() {
     const w = parsePositiveNumber(boardWidthEl, 72);
     const m = parsePositiveNumber(moistureEl, 0.05);
     const highlight = highlightEl.value;
+
+    updateHighlightSummary(w, m, highlight);
 
     tbody.replaceChildren();
     for (let i = 0; i < species.length; i++) {

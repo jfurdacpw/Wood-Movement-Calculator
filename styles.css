@@ -125,6 +125,47 @@ select:focus {
   box-shadow: 0 0 0 3px var(--focus);
 }
 
+.highlight-summary {
+  margin-bottom: 12px;
+  padding: 14px 16px;
+  border-color: var(--border-strong);
+}
+
+.highlight-summary__name {
+  margin: 0 0 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.highlight-summary__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  gap: 10px 20px;
+  margin: 0;
+}
+
+.highlight-summary__pair {
+  margin: 0;
+}
+
+.highlight-summary__pair dt {
+  margin: 0 0 4px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.highlight-summary__pair dd {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
 .table-wrap {
   overflow: hidden;
 }
