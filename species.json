@@ -1,25 +1,2307 @@
 [
-  { "name": "alder (red)", "quarter": 0.0015, "flat": 0.0026 },
-  { "name": "ash (white)", "quarter": 0.0017, "flat": 0.0027 },
-  { "name": "aspen (quaking)", "quarter": 0.0012, "flat": 0.0023 },
-  { "name": "basswood (american)", "quarter": 0.0023, "flat": 0.0033 },
-  { "name": "beech (aerican)", "quarter": 0.0019, "flat": 0.0043 },
-  { "name": "birch (yellow)", "quarter": 0.0026, "flat": 0.0034 },
-  { "name": "butternut", "quarter": 0.0012, "flat": 0.0022 },
-  { "name": "cherry (black)", "quarter": 0.0013, "flat": 0.0025 },
-  { "name": "fir (balsam)", "quarter": 0.0001, "flat": 0.0024 },
-  { "name": "mahogany", "quarter": 0.0017, "flat": 0.0024 },
-  { "name": "maple (red)", "quarter": 0.0014, "flat": 0.0029 },
-  { "name": "maple (sugar)", "quarter": 0.0017, "flat": 0.0035 },
-  { "name": "oak (red)", "quarter": 0.0016, "flat": 0.0037 },
-  { "name": "oak (white)", "quarter": 0.0018, "flat": 0.0037 },
-  { "name": "pine (eastern white)", "quarter": 0.0007, "flat": 0.0021 },
-  { "name": "pine (longleaf)", "quarter": 0.0018, "flat": 0.0026 },
-  { "name": "pine (ponderosa)", "quarter": 0.0013, "flat": 0.0022 },
-  { "name": "pine (sugar)", "quarter": 0.001, "flat": 0.0019 },
-  { "name": "poplar (yellow)", "quarter": 0.0016, "flat": 0.0029 },
-  { "name": "sweetgum", "quarter": 0.0018, "flat": 0.0037 },
-  { "name": "sycamore (american)", "quarter": 0.0017, "flat": 0.003 },
-  { "name": "teak", "quarter": 0.001, "flat": 0.0019 },
-  { "name": "walnut (black)", "quarter": 0.0019, "flat": 0.0027 }
+  {
+    "name": "abura",
+    "quarter": 0.0015,
+    "flat": 0.0033
+  },
+  {
+    "name": "afata",
+    "quarter": 0.0016,
+    "flat": 0.0026
+  },
+  {
+    "name": "african blackwood",
+    "quarter": 0.001,
+    "flat": 0.0017
+  },
+  {
+    "name": "african crabwood",
+    "quarter": 0.0017,
+    "flat": 0.0027
+  },
+  {
+    "name": "african juniper",
+    "quarter": 0.0012,
+    "flat": 0.0018
+  },
+  {
+    "name": "african mahogany",
+    "quarter": 0.0012,
+    "flat": 0.002
+  },
+  {
+    "name": "african mesquite",
+    "quarter": 0.001,
+    "flat": 0.0016
+  },
+  {
+    "name": "african padauk",
+    "quarter": 0.0011,
+    "flat": 0.0018
+  },
+  {
+    "name": "african walnut",
+    "quarter": 0.0013,
+    "flat": 0.0021
+  },
+  {
+    "name": "afrormosia",
+    "quarter": 0.0011,
+    "flat": 0.0022
+  },
+  {
+    "name": "afzelia doussie",
+    "quarter": 0.0008,
+    "flat": 0.0014
+  },
+  {
+    "name": "ailanthus",
+    "quarter": 0.0022,
+    "flat": 0.0039
+  },
+  {
+    "name": "alaska paper birch",
+    "quarter": 0.0023,
+    "flat": 0.0035
+  },
+  {
+    "name": "alaskan yellow cedar",
+    "quarter": 0.001,
+    "flat": 0.0021
+  },
+  {
+    "name": "alder (red)",
+    "quarter": 0.0015,
+    "flat": 0.0026
+  },
+  {
+    "name": "alder leaf birch",
+    "quarter": 0.0018,
+    "flat": 0.0025
+  },
+  {
+    "name": "algarrobo blanco",
+    "quarter": 0.0008,
+    "flat": 0.0011
+  },
+  {
+    "name": "aliso del cerro",
+    "quarter": 0.0015,
+    "flat": 0.0026
+  },
+  {
+    "name": "alligator juniper",
+    "quarter": 0.001,
+    "flat": 0.0013
+  },
+  {
+    "name": "amazon rosewood",
+    "quarter": 0.0013,
+    "flat": 0.0023
+  },
+  {
+    "name": "amendoim",
+    "quarter": 0.0012,
+    "flat": 0.0021
+  },
+  {
+    "name": "american beech",
+    "quarter": 0.002,
+    "flat": 0.0043
+  },
+  {
+    "name": "american chestnut",
+    "quarter": 0.0012,
+    "flat": 0.0024
+  },
+  {
+    "name": "american elm",
+    "quarter": 0.0015,
+    "flat": 0.0034
+  },
+  {
+    "name": "american hornbeam",
+    "quarter": 0.002,
+    "flat": 0.0041
+  },
+  {
+    "name": "amoora",
+    "quarter": 0.0018,
+    "flat": 0.0028
+  },
+  {
+    "name": "andaman padauk",
+    "quarter": 0.0012,
+    "flat": 0.0016
+  },
+  {
+    "name": "andean alder",
+    "quarter": 0.0013,
+    "flat": 0.0024
+  },
+  {
+    "name": "andiroba",
+    "quarter": 0.0011,
+    "flat": 0.0027
+  },
+  {
+    "name": "angelim vermelho",
+    "quarter": 0.0019,
+    "flat": 0.0031
+  },
+  {
+    "name": "anigre",
+    "quarter": 0.0014,
+    "flat": 0.0025
+  },
+  {
+    "name": "anjan",
+    "quarter": 0.0011,
+    "flat": 0.0014
+  },
+  {
+    "name": "apple",
+    "quarter": 0.002,
+    "flat": 0.0036
+  },
+  {
+    "name": "araracanga",
+    "quarter": 0.0021,
+    "flat": 0.0033
+  },
+  {
+    "name": "argentine lignum vitae",
+    "quarter": 0.0017,
+    "flat": 0.0028
+  },
+  {
+    "name": "argentine osage orange",
+    "quarter": 0.0012,
+    "flat": 0.0019
+  },
+  {
+    "name": "ash (white)",
+    "quarter": 0.0017,
+    "flat": 0.0027
+  },
+  {
+    "name": "aspen (quaking)",
+    "quarter": 0.0012,
+    "flat": 0.0023
+  },
+  {
+    "name": "atlantic white cedar",
+    "quarter": 0.001,
+    "flat": 0.0019
+  },
+  {
+    "name": "atlas cedar",
+    "quarter": 0.0016,
+    "flat": 0.0022
+  },
+  {
+    "name": "australian blackwood",
+    "quarter": 0.0014,
+    "flat": 0.0028
+  },
+  {
+    "name": "australian cypress",
+    "quarter": 0.0013,
+    "flat": 0.0018
+  },
+  {
+    "name": "australian red cedar",
+    "quarter": 0.0014,
+    "flat": 0.0022
+  },
+  {
+    "name": "austrian pine",
+    "quarter": 0.0015,
+    "flat": 0.0026
+  },
+  {
+    "name": "avodire",
+    "quarter": 0.0015,
+    "flat": 0.0024
+  },
+  {
+    "name": "balau",
+    "quarter": 0.002,
+    "flat": 0.0036
+  },
+  {
+    "name": "bald cypress",
+    "quarter": 0.0014,
+    "flat": 0.0022
+  },
+  {
+    "name": "balsa",
+    "quarter": 0.0008,
+    "flat": 0.0021
+  },
+  {
+    "name": "balsam fir",
+    "quarter": 0.001,
+    "flat": 0.0025
+  },
+  {
+    "name": "balsam poplar",
+    "quarter": 0.0011,
+    "flat": 0.0025
+  },
+  {
+    "name": "basswood",
+    "quarter": 0.0024,
+    "flat": 0.0033
+  },
+  {
+    "name": "basswood (american)",
+    "quarter": 0.0023,
+    "flat": 0.0033
+  },
+  {
+    "name": "batai",
+    "quarter": 0.001,
+    "flat": 0.002
+  },
+  {
+    "name": "beech (aerican)",
+    "quarter": 0.0019,
+    "flat": 0.0043
+  },
+  {
+    "name": "beefwood",
+    "quarter": 0.0013,
+    "flat": 0.0021
+  },
+  {
+    "name": "bekak",
+    "quarter": 0.0018,
+    "flat": 0.003
+  },
+  {
+    "name": "beli",
+    "quarter": 0.0016,
+    "flat": 0.0033
+  },
+  {
+    "name": "bigleaf maple",
+    "quarter": 0.0013,
+    "flat": 0.0025
+  },
+  {
+    "name": "bigtooth aspen",
+    "quarter": 0.0012,
+    "flat": 0.0028
+  },
+  {
+    "name": "birch (yellow)",
+    "quarter": 0.0026,
+    "flat": 0.0034
+  },
+  {
+    "name": "black ash",
+    "quarter": 0.0018,
+    "flat": 0.0028
+  },
+  {
+    "name": "black cherry",
+    "quarter": 0.0013,
+    "flat": 0.0025
+  },
+  {
+    "name": "black cottonwood",
+    "quarter": 0.0013,
+    "flat": 0.0031
+  },
+  {
+    "name": "black ironwood",
+    "quarter": 0.0022,
+    "flat": 0.0029
+  },
+  {
+    "name": "black locust",
+    "quarter": 0.0016,
+    "flat": 0.0026
+  },
+  {
+    "name": "black maple",
+    "quarter": 0.0017,
+    "flat": 0.0033
+  },
+  {
+    "name": "black mesquite",
+    "quarter": 0.0009,
+    "flat": 0.0013
+  },
+  {
+    "name": "black oak",
+    "quarter": 0.0016,
+    "flat": 0.004
+  },
+  {
+    "name": "black poplar",
+    "quarter": 0.0014,
+    "flat": 0.0033
+  },
+  {
+    "name": "black siris",
+    "quarter": 0.0014,
+    "flat": 0.0029
+  },
+  {
+    "name": "black spruce",
+    "quarter": 0.0015,
+    "flat": 0.0024
+  },
+  {
+    "name": "black tupelo",
+    "quarter": 0.0018,
+    "flat": 0.0031
+  },
+  {
+    "name": "black walnut",
+    "quarter": 0.002,
+    "flat": 0.0028
+  },
+  {
+    "name": "black wattle",
+    "quarter": 0.0011,
+    "flat": 0.0025
+  },
+  {
+    "name": "black willow",
+    "quarter": 0.0012,
+    "flat": 0.0031
+  },
+  {
+    "name": "blackheart sassafras",
+    "quarter": 0.0009,
+    "flat": 0.0022
+  },
+  {
+    "name": "bloodwood",
+    "quarter": 0.0016,
+    "flat": 0.0025
+  },
+  {
+    "name": "blue ash",
+    "quarter": 0.0014,
+    "flat": 0.0023
+  },
+  {
+    "name": "blue gum",
+    "quarter": 0.0024,
+    "flat": 0.0046
+  },
+  {
+    "name": "blue mahoe",
+    "quarter": 0.0008,
+    "flat": 0.0018
+  },
+  {
+    "name": "bocote",
+    "quarter": 0.0014,
+    "flat": 0.0026
+  },
+  {
+    "name": "bois de rose",
+    "quarter": 0.0014,
+    "flat": 0.0024
+  },
+  {
+    "name": "bomanga",
+    "quarter": 0.0013,
+    "flat": 0.0021
+  },
+  {
+    "name": "bosse",
+    "quarter": 0.0016,
+    "flat": 0.0024
+  },
+  {
+    "name": "box elder",
+    "quarter": 0.0014,
+    "flat": 0.0026
+  },
+  {
+    "name": "boxwood",
+    "quarter": 0.0026,
+    "flat": 0.004
+  },
+  {
+    "name": "brazilian pau rosa",
+    "quarter": 0.0016,
+    "flat": 0.0025
+  },
+  {
+    "name": "brazilian rosewood",
+    "quarter": 0.001,
+    "flat": 0.0016
+  },
+  {
+    "name": "brazilwood",
+    "quarter": 0.0017,
+    "flat": 0.003
+  },
+  {
+    "name": "breadnut",
+    "quarter": 0.0019,
+    "flat": 0.0033
+  },
+  {
+    "name": "briar",
+    "quarter": 0.0022,
+    "flat": 0.003
+  },
+  {
+    "name": "broad leaved apple",
+    "quarter": 0.0022,
+    "flat": 0.0034
+  },
+  {
+    "name": "brown ebony",
+    "quarter": 0.0016,
+    "flat": 0.0027
+  },
+  {
+    "name": "brownheart",
+    "quarter": 0.0016,
+    "flat": 0.0024
+  },
+  {
+    "name": "bubinga",
+    "quarter": 0.0021,
+    "flat": 0.0029
+  },
+  {
+    "name": "buckthorn",
+    "quarter": 0.0011,
+    "flat": 0.0016
+  },
+  {
+    "name": "bulletwood",
+    "quarter": 0.0024,
+    "flat": 0.0034
+  },
+  {
+    "name": "bur oak",
+    "quarter": 0.0016,
+    "flat": 0.0031
+  },
+  {
+    "name": "burma padauk",
+    "quarter": 0.0012,
+    "flat": 0.0021
+  },
+  {
+    "name": "burmese blackwood",
+    "quarter": 0.002,
+    "flat": 0.0033
+  },
+  {
+    "name": "butternut",
+    "quarter": 0.0012,
+    "flat": 0.0022
+  },
+  {
+    "name": "california black oak",
+    "quarter": 0.0013,
+    "flat": 0.0024
+  },
+  {
+    "name": "california red fir",
+    "quarter": 0.0016,
+    "flat": 0.0028
+  },
+  {
+    "name": "camphor",
+    "quarter": 0.0011,
+    "flat": 0.0019
+  },
+  {
+    "name": "canarywood",
+    "quarter": 0.0009,
+    "flat": 0.002
+  },
+  {
+    "name": "cape holly",
+    "quarter": 0.0018,
+    "flat": 0.0037
+  },
+  {
+    "name": "caribbean pine",
+    "quarter": 0.0022,
+    "flat": 0.0028
+  },
+  {
+    "name": "castelo boxwood",
+    "quarter": 0.0014,
+    "flat": 0.0026
+  },
+  {
+    "name": "catalpa",
+    "quarter": 0.0009,
+    "flat": 0.0018
+  },
+  {
+    "name": "cedar elm",
+    "quarter": 0.0017,
+    "flat": 0.0036
+  },
+  {
+    "name": "cedar of lebanon",
+    "quarter": 0.0015,
+    "flat": 0.0021
+  },
+  {
+    "name": "cerejeira",
+    "quarter": 0.0011,
+    "flat": 0.0018
+  },
+  {
+    "name": "ceylon ebony",
+    "quarter": 0.0019,
+    "flat": 0.0031
+  },
+  {
+    "name": "chakte viga",
+    "quarter": 0.001,
+    "flat": 0.0029
+  },
+  {
+    "name": "chanfuta",
+    "quarter": 0.0012,
+    "flat": 0.0017
+  },
+  {
+    "name": "chechen",
+    "quarter": 0.0014,
+    "flat": 0.0024
+  },
+  {
+    "name": "cheesewood",
+    "quarter": 0.0014,
+    "flat": 0.0019
+  },
+  {
+    "name": "cherry (black)",
+    "quarter": 0.0013,
+    "flat": 0.0025
+  },
+  {
+    "name": "cherrybark oak",
+    "quarter": 0.002,
+    "flat": 0.0038
+  },
+  {
+    "name": "chestnut oak",
+    "quarter": 0.0019,
+    "flat": 0.0039
+  },
+  {
+    "name": "chichipate",
+    "quarter": 0.0019,
+    "flat": 0.0036
+  },
+  {
+    "name": "chinaberry",
+    "quarter": 0.0018,
+    "flat": 0.003
+  },
+  {
+    "name": "claro walnut",
+    "quarter": 0.0015,
+    "flat": 0.0023
+  },
+  {
+    "name": "coast redwood",
+    "quarter": 0.0009,
+    "flat": 0.0017
+  },
+  {
+    "name": "cocobolo",
+    "quarter": 0.001,
+    "flat": 0.0015
+  },
+  {
+    "name": "coffeetree",
+    "quarter": 0.0015,
+    "flat": 0.0027
+  },
+  {
+    "name": "coracao de negro",
+    "quarter": 0.0022,
+    "flat": 0.003
+  },
+  {
+    "name": "coromandel ebony",
+    "quarter": 0.0019,
+    "flat": 0.0031
+  },
+  {
+    "name": "cuban mahogany",
+    "quarter": 0.0011,
+    "flat": 0.0016
+  },
+  {
+    "name": "cucumbertree",
+    "quarter": 0.0019,
+    "flat": 0.0031
+  },
+  {
+    "name": "cumaru",
+    "quarter": 0.0019,
+    "flat": 0.0027
+  },
+  {
+    "name": "curupay",
+    "quarter": 0.0016,
+    "flat": 0.0027
+  },
+  {
+    "name": "cyprus cedar",
+    "quarter": 0.0015,
+    "flat": 0.0021
+  },
+  {
+    "name": "dahoma",
+    "quarter": 0.0014,
+    "flat": 0.0031
+  },
+  {
+    "name": "dark red meranti",
+    "quarter": 0.0014,
+    "flat": 0.0028
+  },
+  {
+    "name": "dawn redwood",
+    "quarter": 0.001,
+    "flat": 0.0021
+  },
+  {
+    "name": "deglupta",
+    "quarter": 0.0014,
+    "flat": 0.003
+  },
+  {
+    "name": "dogwood",
+    "quarter": 0.0025,
+    "flat": 0.004
+  },
+  {
+    "name": "doi",
+    "quarter": 0.0012,
+    "flat": 0.0024
+  },
+  {
+    "name": "douglas fir",
+    "quarter": 0.0016,
+    "flat": 0.0026
+  },
+  {
+    "name": "downy birch",
+    "quarter": 0.0021,
+    "flat": 0.0036
+  },
+  {
+    "name": "dry zone mahogany",
+    "quarter": 0.0017,
+    "flat": 0.0024
+  },
+  {
+    "name": "east african olive",
+    "quarter": 0.0019,
+    "flat": 0.0031
+  },
+  {
+    "name": "east indian kauri",
+    "quarter": 0.0009,
+    "flat": 0.0019
+  },
+  {
+    "name": "east indian rosewood",
+    "quarter": 0.0009,
+    "flat": 0.0021
+  },
+  {
+    "name": "east indian satinwood",
+    "quarter": 0.002,
+    "flat": 0.0028
+  },
+  {
+    "name": "eastern hemlock",
+    "quarter": 0.0011,
+    "flat": 0.0024
+  },
+  {
+    "name": "eastern red cedar",
+    "quarter": 0.0011,
+    "flat": 0.0017
+  },
+  {
+    "name": "eastern white pine",
+    "quarter": 0.0008,
+    "flat": 0.0022
+  },
+  {
+    "name": "ebiara",
+    "quarter": 0.0017,
+    "flat": 0.0031
+  },
+  {
+    "name": "ekki",
+    "quarter": 0.0029,
+    "flat": 0.004
+  },
+  {
+    "name": "endra endra",
+    "quarter": 0.002,
+    "flat": 0.0026
+  },
+  {
+    "name": "engelmann spruce",
+    "quarter": 0.0014,
+    "flat": 0.0025
+  },
+  {
+    "name": "english elm",
+    "quarter": 0.0018,
+    "flat": 0.0025
+  },
+  {
+    "name": "english holly",
+    "quarter": 0.0019,
+    "flat": 0.0036
+  },
+  {
+    "name": "english oak",
+    "quarter": 0.0017,
+    "flat": 0.003
+  },
+  {
+    "name": "english walnut",
+    "quarter": 0.002,
+    "flat": 0.0027
+  },
+  {
+    "name": "espave",
+    "quarter": 0.001,
+    "flat": 0.0019
+  },
+  {
+    "name": "etimoe",
+    "quarter": 0.0018,
+    "flat": 0.0029
+  },
+  {
+    "name": "european alder",
+    "quarter": 0.0013,
+    "flat": 0.0025
+  },
+  {
+    "name": "european ash",
+    "quarter": 0.002,
+    "flat": 0.0034
+  },
+  {
+    "name": "european aspen",
+    "quarter": 0.0017,
+    "flat": 0.003
+  },
+  {
+    "name": "european beech",
+    "quarter": 0.0021,
+    "flat": 0.0042
+  },
+  {
+    "name": "european hornbeam",
+    "quarter": 0.0024,
+    "flat": 0.0041
+  },
+  {
+    "name": "european larch",
+    "quarter": 0.0015,
+    "flat": 0.0029
+  },
+  {
+    "name": "european lime",
+    "quarter": 0.0018,
+    "flat": 0.0027
+  },
+  {
+    "name": "european silver fir",
+    "quarter": 0.0014,
+    "flat": 0.0031
+  },
+  {
+    "name": "european yew",
+    "quarter": 0.0012,
+    "flat": 0.0019
+  },
+  {
+    "name": "fijian kauri",
+    "quarter": 0.0019,
+    "flat": 0.0028
+  },
+  {
+    "name": "fir (balsam)",
+    "quarter": 0.0001,
+    "flat": 0.0024
+  },
+  {
+    "name": "freijo",
+    "quarter": 0.0014,
+    "flat": 0.0024
+  },
+  {
+    "name": "gaboon ebony",
+    "quarter": 0.003,
+    "flat": 0.004
+  },
+  {
+    "name": "garapa",
+    "quarter": 0.0015,
+    "flat": 0.0027
+  },
+  {
+    "name": "giant chinkapin",
+    "quarter": 0.0016,
+    "flat": 0.0026
+  },
+  {
+    "name": "giant sequoia",
+    "quarter": 0.0006,
+    "flat": 0.0014
+  },
+  {
+    "name": "gidgee",
+    "quarter": 0.0014,
+    "flat": 0.0018
+  },
+  {
+    "name": "goncalo alves",
+    "quarter": 0.0015,
+    "flat": 0.0028
+  },
+  {
+    "name": "grand fir",
+    "quarter": 0.0012,
+    "flat": 0.0027
+  },
+  {
+    "name": "gray birch",
+    "quarter": 0.0019,
+    "flat": 0.0034
+  },
+  {
+    "name": "green ash",
+    "quarter": 0.0016,
+    "flat": 0.0025
+  },
+  {
+    "name": "greenheart",
+    "quarter": 0.0029,
+    "flat": 0.0032
+  },
+  {
+    "name": "guanacaste",
+    "quarter": 0.0008,
+    "flat": 0.0018
+  },
+  {
+    "name": "guatemalan mora",
+    "quarter": 0.0012,
+    "flat": 0.0019
+  },
+  {
+    "name": "hackberry",
+    "quarter": 0.0017,
+    "flat": 0.0032
+  },
+  {
+    "name": "hard maple",
+    "quarter": 0.0017,
+    "flat": 0.0035
+  },
+  {
+    "name": "hard milkwood",
+    "quarter": 0.0011,
+    "flat": 0.0017
+  },
+  {
+    "name": "holly",
+    "quarter": 0.0017,
+    "flat": 0.0035
+  },
+  {
+    "name": "holm oak",
+    "quarter": 0.0016,
+    "flat": 0.0024
+  },
+  {
+    "name": "honduran mahogany",
+    "quarter": 0.001,
+    "flat": 0.0015
+  },
+  {
+    "name": "honey locust",
+    "quarter": 0.0015,
+    "flat": 0.0024
+  },
+  {
+    "name": "honey mesquite",
+    "quarter": 0.0006,
+    "flat": 0.0011
+  },
+  {
+    "name": "hoop pine",
+    "quarter": 0.0012,
+    "flat": 0.0019
+  },
+  {
+    "name": "hophornbeam",
+    "quarter": 0.0029,
+    "flat": 0.0034
+  },
+  {
+    "name": "hububalli",
+    "quarter": 0.0012,
+    "flat": 0.0026
+  },
+  {
+    "name": "huon pine",
+    "quarter": 0.0016,
+    "flat": 0.0022
+  },
+  {
+    "name": "idigbo",
+    "quarter": 0.0013,
+    "flat": 0.002
+  },
+  {
+    "name": "imbuia",
+    "quarter": 0.0011,
+    "flat": 0.0023
+  },
+  {
+    "name": "incense cedar",
+    "quarter": 0.0012,
+    "flat": 0.0019
+  },
+  {
+    "name": "indian laurel",
+    "quarter": 0.0017,
+    "flat": 0.0026
+  },
+  {
+    "name": "indian pulai",
+    "quarter": 0.0013,
+    "flat": 0.0021
+  },
+  {
+    "name": "indian silver greywood",
+    "quarter": 0.0019,
+    "flat": 0.0026
+  },
+  {
+    "name": "ipe",
+    "quarter": 0.002,
+    "flat": 0.0025
+  },
+  {
+    "name": "iroko",
+    "quarter": 0.0012,
+    "flat": 0.0017
+  },
+  {
+    "name": "itin",
+    "quarter": 0.002,
+    "flat": 0.0024
+  },
+  {
+    "name": "izombe",
+    "quarter": 0.0014,
+    "flat": 0.0025
+  },
+  {
+    "name": "jack pine",
+    "quarter": 0.0013,
+    "flat": 0.0024
+  },
+  {
+    "name": "jarrah",
+    "quarter": 0.0022,
+    "flat": 0.0034
+  },
+  {
+    "name": "jatoba",
+    "quarter": 0.0015,
+    "flat": 0.0029
+  },
+  {
+    "name": "jeffrey pine",
+    "quarter": 0.0016,
+    "flat": 0.0024
+  },
+  {
+    "name": "jelutong",
+    "quarter": 0.0008,
+    "flat": 0.002
+  },
+  {
+    "name": "jucaro",
+    "quarter": 0.0015,
+    "flat": 0.0033
+  },
+  {
+    "name": "karri",
+    "quarter": 0.0028,
+    "flat": 0.0046
+  },
+  {
+    "name": "karri oak",
+    "quarter": 0.0041,
+    "flat": 0.005
+  },
+  {
+    "name": "katalox",
+    "quarter": 0.0014,
+    "flat": 0.0027
+  },
+  {
+    "name": "kempas",
+    "quarter": 0.0018,
+    "flat": 0.0024
+  },
+  {
+    "name": "keruing",
+    "quarter": 0.002,
+    "flat": 0.0039
+  },
+  {
+    "name": "khasi pine",
+    "quarter": 0.0018,
+    "flat": 0.003
+  },
+  {
+    "name": "kingwood",
+    "quarter": 0.0025,
+    "flat": 0.0033
+  },
+  {
+    "name": "koa",
+    "quarter": 0.002,
+    "flat": 0.0022
+  },
+  {
+    "name": "kosipo",
+    "quarter": 0.0016,
+    "flat": 0.0024
+  },
+  {
+    "name": "koto",
+    "quarter": 0.0018,
+    "flat": 0.0038
+  },
+  {
+    "name": "lancewood",
+    "quarter": 0.0022,
+    "flat": 0.0034
+  },
+  {
+    "name": "lati",
+    "quarter": 0.0022,
+    "flat": 0.0038
+  },
+  {
+    "name": "laurel blanco",
+    "quarter": 0.0014,
+    "flat": 0.0022
+  },
+  {
+    "name": "laurel oak",
+    "quarter": 0.0014,
+    "flat": 0.0035
+  },
+  {
+    "name": "leadwood",
+    "quarter": 0.0007,
+    "flat": 0.0017
+  },
+  {
+    "name": "lebbeck",
+    "quarter": 0.001,
+    "flat": 0.0021
+  },
+  {
+    "name": "lebombo ironwood",
+    "quarter": 0.0021,
+    "flat": 0.0022
+  },
+  {
+    "name": "lemonwood",
+    "quarter": 0.0017,
+    "flat": 0.0031
+  },
+  {
+    "name": "leopardwood",
+    "quarter": 0.0013,
+    "flat": 0.0031
+  },
+  {
+    "name": "leyland cypress",
+    "quarter": 0.001,
+    "flat": 0.0024
+  },
+  {
+    "name": "light red meranti",
+    "quarter": 0.0015,
+    "flat": 0.0028
+  },
+  {
+    "name": "lignum vitae",
+    "quarter": 0.0019,
+    "flat": 0.0031
+  },
+  {
+    "name": "limba",
+    "quarter": 0.0015,
+    "flat": 0.0022
+  },
+  {
+    "name": "limber pine",
+    "quarter": 0.0009,
+    "flat": 0.0018
+  },
+  {
+    "name": "live oak",
+    "quarter": 0.0024,
+    "flat": 0.0034
+  },
+  {
+    "name": "loblolly pine",
+    "quarter": 0.0017,
+    "flat": 0.0026
+  },
+  {
+    "name": "lodgepole pine",
+    "quarter": 0.0015,
+    "flat": 0.0024
+  },
+  {
+    "name": "longleaf pine",
+    "quarter": 0.0018,
+    "flat": 0.0027
+  },
+  {
+    "name": "louro preto",
+    "quarter": 0.0014,
+    "flat": 0.0026
+  },
+  {
+    "name": "lyptus",
+    "quarter": 0.0029,
+    "flat": 0.0046
+  },
+  {
+    "name": "macacauba",
+    "quarter": 0.001,
+    "flat": 0.0015
+  },
+  {
+    "name": "machiche",
+    "quarter": 0.0014,
+    "flat": 0.0029
+  },
+  {
+    "name": "madagascar rosewood",
+    "quarter": 0.0013,
+    "flat": 0.0023
+  },
+  {
+    "name": "madrone",
+    "quarter": 0.002,
+    "flat": 0.0044
+  },
+  {
+    "name": "mahogany",
+    "quarter": 0.0017,
+    "flat": 0.0024
+  },
+  {
+    "name": "makore",
+    "quarter": 0.002,
+    "flat": 0.0027
+  },
+  {
+    "name": "mangium",
+    "quarter": 0.001,
+    "flat": 0.0028
+  },
+  {
+    "name": "mango",
+    "quarter": 0.0013,
+    "flat": 0.002
+  },
+  {
+    "name": "mansonia",
+    "quarter": 0.0016,
+    "flat": 0.0027
+  },
+  {
+    "name": "maple (red)",
+    "quarter": 0.0014,
+    "flat": 0.0029
+  },
+  {
+    "name": "maple (sugar)",
+    "quarter": 0.0017,
+    "flat": 0.0035
+  },
+  {
+    "name": "marblewood",
+    "quarter": 0.0021,
+    "flat": 0.0037
+  },
+  {
+    "name": "maritime pine",
+    "quarter": 0.0016,
+    "flat": 0.0032
+  },
+  {
+    "name": "merbau",
+    "quarter": 0.001,
+    "flat": 0.0017
+  },
+  {
+    "name": "messmate",
+    "quarter": 0.0019,
+    "flat": 0.0037
+  },
+  {
+    "name": "mexican cypress",
+    "quarter": 0.001,
+    "flat": 0.0021
+  },
+  {
+    "name": "moabi",
+    "quarter": 0.0022,
+    "flat": 0.0029
+  },
+  {
+    "name": "mockernut hickory",
+    "quarter": 0.0027,
+    "flat": 0.0039
+  },
+  {
+    "name": "monkey puzzle",
+    "quarter": 0.0018,
+    "flat": 0.0025
+  },
+  {
+    "name": "monkeypod",
+    "quarter": 0.0007,
+    "flat": 0.0012
+  },
+  {
+    "name": "monterey cypress",
+    "quarter": 0.0013,
+    "flat": 0.0022
+  },
+  {
+    "name": "mopane",
+    "quarter": 0.0014,
+    "flat": 0.0019
+  },
+  {
+    "name": "mora",
+    "quarter": 0.0024,
+    "flat": 0.0035
+  },
+  {
+    "name": "mountain ash",
+    "quarter": 0.0023,
+    "flat": 0.0046
+  },
+  {
+    "name": "mountain hemlock",
+    "quarter": 0.0016,
+    "flat": 0.0025
+  },
+  {
+    "name": "mountain mahogany",
+    "quarter": 0.0008,
+    "flat": 0.0016
+  },
+  {
+    "name": "movingui",
+    "quarter": 0.0013,
+    "flat": 0.002
+  },
+  {
+    "name": "mulberry",
+    "quarter": 0.0012,
+    "flat": 0.0024
+  },
+  {
+    "name": "muninga",
+    "quarter": 0.0006,
+    "flat": 0.001
+  },
+  {
+    "name": "mutenye",
+    "quarter": 0.0019,
+    "flat": 0.0032
+  },
+  {
+    "name": "nargusta",
+    "quarter": 0.0023,
+    "flat": 0.0031
+  },
+  {
+    "name": "narra",
+    "quarter": 0.001,
+    "flat": 0.0014
+  },
+  {
+    "name": "nepalese alder",
+    "quarter": 0.0009,
+    "flat": 0.0021
+  },
+  {
+    "name": "new guinea walnut",
+    "quarter": 0.0013,
+    "flat": 0.0024
+  },
+  {
+    "name": "new zealand kauri",
+    "quarter": 0.0015,
+    "flat": 0.0021
+  },
+  {
+    "name": "noble fir",
+    "quarter": 0.0015,
+    "flat": 0.003
+  },
+  {
+    "name": "norfolk island pine",
+    "quarter": 0.0013,
+    "flat": 0.0019
+  },
+  {
+    "name": "northern silky oak",
+    "quarter": 0.0014,
+    "flat": 0.0026
+  },
+  {
+    "name": "northern white cedar",
+    "quarter": 0.0008,
+    "flat": 0.0018
+  },
+  {
+    "name": "norway spruce",
+    "quarter": 0.0014,
+    "flat": 0.0029
+  },
+  {
+    "name": "nyatoh",
+    "quarter": 0.0011,
+    "flat": 0.002
+  },
+  {
+    "name": "oak (red)",
+    "quarter": 0.0016,
+    "flat": 0.0037
+  },
+  {
+    "name": "oak (white)",
+    "quarter": 0.0018,
+    "flat": 0.0037
+  },
+  {
+    "name": "obeche",
+    "quarter": 0.0011,
+    "flat": 0.0019
+  },
+  {
+    "name": "ocote pine",
+    "quarter": 0.0016,
+    "flat": 0.0027
+  },
+  {
+    "name": "ohia",
+    "quarter": 0.0025,
+    "flat": 0.0043
+  },
+  {
+    "name": "okoume",
+    "quarter": 0.0016,
+    "flat": 0.0025
+  },
+  {
+    "name": "olive",
+    "quarter": 0.0018,
+    "flat": 0.0027
+  },
+  {
+    "name": "opepe",
+    "quarter": 0.0017,
+    "flat": 0.0029
+  },
+  {
+    "name": "oregon ash",
+    "quarter": 0.0015,
+    "flat": 0.0029
+  },
+  {
+    "name": "oregon myrtle",
+    "quarter": 0.001,
+    "flat": 0.0029
+  },
+  {
+    "name": "oregon white oak",
+    "quarter": 0.0015,
+    "flat": 0.0032
+  },
+  {
+    "name": "osage orange",
+    "quarter": 0.0014,
+    "flat": 0.002
+  },
+  {
+    "name": "ovangkol",
+    "quarter": 0.0015,
+    "flat": 0.003
+  },
+  {
+    "name": "overcup oak",
+    "quarter": 0.0019,
+    "flat": 0.0045
+  },
+  {
+    "name": "pacific maple",
+    "quarter": 0.0024,
+    "flat": 0.0038
+  },
+  {
+    "name": "pacific silver fir",
+    "quarter": 0.0016,
+    "flat": 0.0033
+  },
+  {
+    "name": "pacific yew",
+    "quarter": 0.0014,
+    "flat": 0.0019
+  },
+  {
+    "name": "paldao",
+    "quarter": 0.0014,
+    "flat": 0.0027
+  },
+  {
+    "name": "panga panga",
+    "quarter": 0.0014,
+    "flat": 0.0024
+  },
+  {
+    "name": "paper birch",
+    "quarter": 0.0022,
+    "flat": 0.0031
+  },
+  {
+    "name": "parana pine",
+    "quarter": 0.0014,
+    "flat": 0.0026
+  },
+  {
+    "name": "partridgewood",
+    "quarter": 0.0016,
+    "flat": 0.0031
+  },
+  {
+    "name": "patula pine",
+    "quarter": 0.0015,
+    "flat": 0.0028
+  },
+  {
+    "name": "pau ferro",
+    "quarter": 0.001,
+    "flat": 0.0024
+  },
+  {
+    "name": "pau rosa",
+    "quarter": 0.0015,
+    "flat": 0.0021
+  },
+  {
+    "name": "pau santo",
+    "quarter": 0.0018,
+    "flat": 0.0034
+  },
+  {
+    "name": "paulownia",
+    "quarter": 0.0009,
+    "flat": 0.0014
+  },
+  {
+    "name": "pear",
+    "quarter": 0.0014,
+    "flat": 0.004
+  },
+  {
+    "name": "pecan",
+    "quarter": 0.0018,
+    "flat": 0.0032
+  },
+  {
+    "name": "peroba rosa",
+    "quarter": 0.0015,
+    "flat": 0.0026
+  },
+  {
+    "name": "persimmon",
+    "quarter": 0.0028,
+    "flat": 0.004
+  },
+  {
+    "name": "peruvian walnut",
+    "quarter": 0.0013,
+    "flat": 0.0027
+  },
+  {
+    "name": "pignut hickory",
+    "quarter": 0.0026,
+    "flat": 0.0041
+  },
+  {
+    "name": "pin oak",
+    "quarter": 0.0015,
+    "flat": 0.0034
+  },
+  {
+    "name": "pine (eastern white)",
+    "quarter": 0.0007,
+    "flat": 0.0021
+  },
+  {
+    "name": "pine (longleaf)",
+    "quarter": 0.0018,
+    "flat": 0.0026
+  },
+  {
+    "name": "pine (ponderosa)",
+    "quarter": 0.0013,
+    "flat": 0.0022
+  },
+  {
+    "name": "pine (sugar)",
+    "quarter": 0.001,
+    "flat": 0.0019
+  },
+  {
+    "name": "pink ivory",
+    "quarter": 0.0017,
+    "flat": 0.0026
+  },
+  {
+    "name": "pink lapacho",
+    "quarter": 0.0015,
+    "flat": 0.0026
+  },
+  {
+    "name": "pinyon pine",
+    "quarter": 0.0016,
+    "flat": 0.0019
+  },
+  {
+    "name": "pitch pine",
+    "quarter": 0.0014,
+    "flat": 0.0025
+  },
+  {
+    "name": "pond pine",
+    "quarter": 0.0018,
+    "flat": 0.0025
+  },
+  {
+    "name": "ponderosa pine",
+    "quarter": 0.0014,
+    "flat": 0.0022
+  },
+  {
+    "name": "poplar (yellow)",
+    "quarter": 0.0016,
+    "flat": 0.0029
+  },
+  {
+    "name": "port orford cedar",
+    "quarter": 0.0016,
+    "flat": 0.0025
+  },
+  {
+    "name": "post oak",
+    "quarter": 0.0019,
+    "flat": 0.0035
+  },
+  {
+    "name": "preciosa",
+    "quarter": 0.0023,
+    "flat": 0.0029
+  },
+  {
+    "name": "primavera",
+    "quarter": 0.0011,
+    "flat": 0.0018
+  },
+  {
+    "name": "prosopis juliflora",
+    "quarter": 0.0016,
+    "flat": 0.0029
+  },
+  {
+    "name": "pumpkin ash",
+    "quarter": 0.0013,
+    "flat": 0.0022
+  },
+  {
+    "name": "purpleheart",
+    "quarter": 0.0014,
+    "flat": 0.0023
+  },
+  {
+    "name": "pyinma",
+    "quarter": 0.0016,
+    "flat": 0.0024
+  },
+  {
+    "name": "quaking aspen",
+    "quarter": 0.0013,
+    "flat": 0.0024
+  },
+  {
+    "name": "quebracho",
+    "quarter": 0.0014,
+    "flat": 0.0021
+  },
+  {
+    "name": "queensland kauri",
+    "quarter": 0.0013,
+    "flat": 0.0022
+  },
+  {
+    "name": "queensland maple",
+    "quarter": 0.0022,
+    "flat": 0.0031
+  },
+  {
+    "name": "queensland walnut",
+    "quarter": 0.0016,
+    "flat": 0.0031
+  },
+  {
+    "name": "quina",
+    "quarter": 0.0014,
+    "flat": 0.0022
+  },
+  {
+    "name": "radiata pine",
+    "quarter": 0.0012,
+    "flat": 0.0024
+  },
+  {
+    "name": "ramin",
+    "quarter": 0.0016,
+    "flat": 0.0032
+  },
+  {
+    "name": "raspberry jam",
+    "quarter": 0.0008,
+    "flat": 0.0011
+  },
+  {
+    "name": "red alder",
+    "quarter": 0.0016,
+    "flat": 0.0026
+  },
+  {
+    "name": "red ash",
+    "quarter": 0.0013,
+    "flat": 0.0033
+  },
+  {
+    "name": "red elm",
+    "quarter": 0.0018,
+    "flat": 0.0032
+  },
+  {
+    "name": "red maple",
+    "quarter": 0.0014,
+    "flat": 0.0029
+  },
+  {
+    "name": "red oak",
+    "quarter": 0.0014,
+    "flat": 0.0031
+  },
+  {
+    "name": "red pine",
+    "quarter": 0.0014,
+    "flat": 0.0026
+  },
+  {
+    "name": "red spruce",
+    "quarter": 0.0014,
+    "flat": 0.0028
+  },
+  {
+    "name": "redheart",
+    "quarter": 0.001,
+    "flat": 0.0029
+  },
+  {
+    "name": "rengas",
+    "quarter": 0.001,
+    "flat": 0.0019
+  },
+  {
+    "name": "rhodesian teak",
+    "quarter": 0.0009,
+    "flat": 0.0016
+  },
+  {
+    "name": "river birch",
+    "quarter": 0.0017,
+    "flat": 0.0033
+  },
+  {
+    "name": "river red gum",
+    "quarter": 0.0019,
+    "flat": 0.0031
+  },
+  {
+    "name": "rock elm",
+    "quarter": 0.0017,
+    "flat": 0.0029
+  },
+  {
+    "name": "rock sheoak",
+    "quarter": 0.0022,
+    "flat": 0.0041
+  },
+  {
+    "name": "rose gum",
+    "quarter": 0.0021,
+    "flat": 0.0036
+  },
+  {
+    "name": "rose sheoak",
+    "quarter": 0.001,
+    "flat": 0.0031
+  },
+  {
+    "name": "rough barked apple",
+    "quarter": 0.0022,
+    "flat": 0.0034
+  },
+  {
+    "name": "rowan",
+    "quarter": 0.0022,
+    "flat": 0.003
+  },
+  {
+    "name": "rubberwood",
+    "quarter": 0.0008,
+    "flat": 0.0018
+  },
+  {
+    "name": "sand pine",
+    "quarter": 0.0014,
+    "flat": 0.0026
+  },
+  {
+    "name": "sande",
+    "quarter": 0.0017,
+    "flat": 0.0028
+  },
+  {
+    "name": "santos mahogany",
+    "quarter": 0.0014,
+    "flat": 0.0022
+  },
+  {
+    "name": "sapele",
+    "quarter": 0.0019,
+    "flat": 0.0026
+  },
+  {
+    "name": "sapodilla",
+    "quarter": 0.0022,
+    "flat": 0.0033
+  },
+  {
+    "name": "sassafras",
+    "quarter": 0.0014,
+    "flat": 0.0022
+  },
+  {
+    "name": "scarlet oak",
+    "quarter": 0.0016,
+    "flat": 0.0039
+  },
+  {
+    "name": "scots pine",
+    "quarter": 0.0019,
+    "flat": 0.003
+  },
+  {
+    "name": "serviceberry",
+    "quarter": 0.0024,
+    "flat": 0.0039
+  },
+  {
+    "name": "sessile oak",
+    "quarter": 0.0016,
+    "flat": 0.0035
+  },
+  {
+    "name": "shagbark hickory",
+    "quarter": 0.0025,
+    "flat": 0.0037
+  },
+  {
+    "name": "shellbark hickory",
+    "quarter": 0.0027,
+    "flat": 0.0045
+  },
+  {
+    "name": "shittim",
+    "quarter": 0.0013,
+    "flat": 0.0021
+  },
+  {
+    "name": "shortleaf pine",
+    "quarter": 0.0016,
+    "flat": 0.0027
+  },
+  {
+    "name": "silver maple",
+    "quarter": 0.0011,
+    "flat": 0.0026
+  },
+  {
+    "name": "sissoo",
+    "quarter": 0.0011,
+    "flat": 0.0019
+  },
+  {
+    "name": "sitka spruce",
+    "quarter": 0.0015,
+    "flat": 0.0027
+  },
+  {
+    "name": "slash pine",
+    "quarter": 0.0019,
+    "flat": 0.0027
+  },
+  {
+    "name": "smooth barked apple",
+    "quarter": 0.0016,
+    "flat": 0.0028
+  },
+  {
+    "name": "snakewood",
+    "quarter": 0.0017,
+    "flat": 0.0021
+  },
+  {
+    "name": "sneezewood",
+    "quarter": 0.0013,
+    "flat": 0.002
+  },
+  {
+    "name": "soto",
+    "quarter": 0.0019,
+    "flat": 0.0037
+  },
+  {
+    "name": "sourwood",
+    "quarter": 0.0022,
+    "flat": 0.0032
+  },
+  {
+    "name": "southern magnolia",
+    "quarter": 0.0019,
+    "flat": 0.0024
+  },
+  {
+    "name": "southern red oak",
+    "quarter": 0.0017,
+    "flat": 0.004
+  },
+  {
+    "name": "southern redcedar",
+    "quarter": 0.0008,
+    "flat": 0.0014
+  },
+  {
+    "name": "southern silky oak",
+    "quarter": 0.001,
+    "flat": 0.0027
+  },
+  {
+    "name": "spanish cedar",
+    "quarter": 0.0015,
+    "flat": 0.0022
+  },
+  {
+    "name": "spotted gum",
+    "quarter": 0.0022,
+    "flat": 0.0035
+  },
+  {
+    "name": "striped maple",
+    "quarter": 0.0011,
+    "flat": 0.0031
+  },
+  {
+    "name": "subalpine fir",
+    "quarter": 0.0009,
+    "flat": 0.0026
+  },
+  {
+    "name": "sucupira",
+    "quarter": 0.0019,
+    "flat": 0.0029
+  },
+  {
+    "name": "sugar pine",
+    "quarter": 0.001,
+    "flat": 0.002
+  },
+  {
+    "name": "sugi",
+    "quarter": 0.0008,
+    "flat": 0.0024
+  },
+  {
+    "name": "sumatran pine",
+    "quarter": 0.0021,
+    "flat": 0.0031
+  },
+  {
+    "name": "swamp chestnut oak",
+    "quarter": 0.0019,
+    "flat": 0.0039
+  },
+  {
+    "name": "swamp mahogany",
+    "quarter": 0.0025,
+    "flat": 0.0037
+  },
+  {
+    "name": "swamp white oak",
+    "quarter": 0.002,
+    "flat": 0.0038
+  },
+  {
+    "name": "sweet birch",
+    "quarter": 0.0023,
+    "flat": 0.0032
+  },
+  {
+    "name": "sweet cherry",
+    "quarter": 0.0018,
+    "flat": 0.003
+  },
+  {
+    "name": "sweet chestnut",
+    "quarter": 0.0015,
+    "flat": 0.0025
+  },
+  {
+    "name": "sweetbay",
+    "quarter": 0.0017,
+    "flat": 0.003
+  },
+  {
+    "name": "sweetgum",
+    "quarter": 0.0018,
+    "flat": 0.0037
+  },
+  {
+    "name": "sycamore",
+    "quarter": 0.0018,
+    "flat": 0.003
+  },
+  {
+    "name": "sycamore (american)",
+    "quarter": 0.0017,
+    "flat": 0.003
+  },
+  {
+    "name": "sycamore maple",
+    "quarter": 0.0016,
+    "flat": 0.0028
+  },
+  {
+    "name": "table mountain pine",
+    "quarter": 0.0012,
+    "flat": 0.0024
+  },
+  {
+    "name": "tamarack",
+    "quarter": 0.0013,
+    "flat": 0.0026
+  },
+  {
+    "name": "tambootie",
+    "quarter": 0.001,
+    "flat": 0.0019
+  },
+  {
+    "name": "tanoak",
+    "quarter": 0.0018,
+    "flat": 0.0042
+  },
+  {
+    "name": "tasmanian myrtle",
+    "quarter": 0.0019,
+    "flat": 0.0036
+  },
+  {
+    "name": "tatabu",
+    "quarter": 0.0017,
+    "flat": 0.0025
+  },
+  {
+    "name": "tatajuba",
+    "quarter": 0.0016,
+    "flat": 0.0021
+  },
+  {
+    "name": "teak",
+    "quarter": 0.001,
+    "flat": 0.0019
+  },
+  {
+    "name": "thinwin",
+    "quarter": 0.0015,
+    "flat": 0.0027
+  },
+  {
+    "name": "thuya",
+    "quarter": 0.0016,
+    "flat": 0.0018
+  },
+  {
+    "name": "tiete rosewood",
+    "quarter": 0.0014,
+    "flat": 0.0025
+  },
+  {
+    "name": "tigre caspi",
+    "quarter": 0.0027,
+    "flat": 0.0036
+  },
+  {
+    "name": "timborana",
+    "quarter": 0.0016,
+    "flat": 0.0025
+  },
+  {
+    "name": "tornillo",
+    "quarter": 0.0014,
+    "flat": 0.0025
+  },
+  {
+    "name": "turkey oak",
+    "quarter": 0.0021,
+    "flat": 0.0036
+  },
+  {
+    "name": "turpentine",
+    "quarter": 0.002,
+    "flat": 0.0037
+  },
+  {
+    "name": "tzalam",
+    "quarter": 0.001,
+    "flat": 0.0026
+  },
+  {
+    "name": "utile",
+    "quarter": 0.0018,
+    "flat": 0.0025
+  },
+  {
+    "name": "virginia pine",
+    "quarter": 0.0015,
+    "flat": 0.0026
+  },
+  {
+    "name": "walnut (black)",
+    "quarter": 0.0019,
+    "flat": 0.0027
+  },
+  {
+    "name": "wamara",
+    "quarter": 0.0017,
+    "flat": 0.0027
+  },
+  {
+    "name": "water oak",
+    "quarter": 0.0016,
+    "flat": 0.0035
+  },
+  {
+    "name": "water tupelo",
+    "quarter": 0.0015,
+    "flat": 0.0027
+  },
+  {
+    "name": "wenge",
+    "quarter": 0.0017,
+    "flat": 0.003
+  },
+  {
+    "name": "west african albizia",
+    "quarter": 0.001,
+    "flat": 0.0016
+  },
+  {
+    "name": "western hemlock",
+    "quarter": 0.0015,
+    "flat": 0.0028
+  },
+  {
+    "name": "western larch",
+    "quarter": 0.0016,
+    "flat": 0.0032
+  },
+  {
+    "name": "western red cedar",
+    "quarter": 0.0009,
+    "flat": 0.0018
+  },
+  {
+    "name": "western sheoak",
+    "quarter": 0.0009,
+    "flat": 0.0028
+  },
+  {
+    "name": "western white pine",
+    "quarter": 0.0015,
+    "flat": 0.0026
+  },
+  {
+    "name": "white ash",
+    "quarter": 0.0018,
+    "flat": 0.0028
+  },
+  {
+    "name": "white fir",
+    "quarter": 0.0012,
+    "flat": 0.0025
+  },
+  {
+    "name": "white meranti",
+    "quarter": 0.0012,
+    "flat": 0.0025
+  },
+  {
+    "name": "white oak",
+    "quarter": 0.002,
+    "flat": 0.0037
+  },
+  {
+    "name": "white poplar",
+    "quarter": 0.0011,
+    "flat": 0.0019
+  },
+  {
+    "name": "white spruce",
+    "quarter": 0.0017,
+    "flat": 0.0029
+  },
+  {
+    "name": "white willow",
+    "quarter": 0.0015,
+    "flat": 0.0026
+  },
+  {
+    "name": "willow leaf red quebracho",
+    "quarter": 0.0018,
+    "flat": 0.0029
+  },
+  {
+    "name": "willow oak",
+    "quarter": 0.0018,
+    "flat": 0.0034
+  },
+  {
+    "name": "winged elm",
+    "quarter": 0.0019,
+    "flat": 0.0041
+  },
+  {
+    "name": "yellow birch",
+    "quarter": 0.0026,
+    "flat": 0.0034
+  },
+  {
+    "name": "yellow box",
+    "quarter": 0.0019,
+    "flat": 0.0037
+  },
+  {
+    "name": "yellow buckeye",
+    "quarter": 0.0013,
+    "flat": 0.0029
+  },
+  {
+    "name": "yellow gum",
+    "quarter": 0.0019,
+    "flat": 0.0037
+  },
+  {
+    "name": "yellow lapacho",
+    "quarter": 0.0014,
+    "flat": 0.002
+  },
+  {
+    "name": "yellow meranti",
+    "quarter": 0.0012,
+    "flat": 0.0027
+  },
+  {
+    "name": "yellow poplar",
+    "quarter": 0.0016,
+    "flat": 0.0029
+  },
+  {
+    "name": "yellow silverballi",
+    "quarter": 0.0016,
+    "flat": 0.0026
+  },
+  {
+    "name": "yellowheart",
+    "quarter": 0.002,
+    "flat": 0.0024
+  },
+  {
+    "name": "yucatan rosewood",
+    "quarter": 0.0018,
+    "flat": 0.0024
+  },
+  {
+    "name": "zebrawood",
+    "quarter": 0.0027,
+    "flat": 0.0039
+  },
+  {
+    "name": "ziricote",
+    "quarter": 0.0013,
+    "flat": 0.0024
+  }
 ]
