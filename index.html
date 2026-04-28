@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wood movement calculator</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <h1 class="title">Wood movement calculator</h1>
+        <p class="lede">
+          Movement uses the same formula as the spreadsheet:
+          coefficient × board width (in.) × moisture variance × 100.
+        </p>
+      </header>
+
+      <section class="panel controls" aria-label="Inputs">
+        <div class="field">
+          <label for="boardWidth">Board width (in.)</label>
+          <input
+            id="boardWidth"
+            type="number"
+            inputmode="decimal"
+            min="0"
+            step="any"
+            value="72"
+            autocomplete="off"
+          />
+        </div>
+        <div class="field">
+          <label for="moistureVariance">Moisture variance</label>
+          <input
+            id="moistureVariance"
+            type="number"
+            inputmode="decimal"
+            min="0"
+            step="any"
+            value="0.05"
+            autocomplete="off"
+          />
+          <span class="hint">Decimal (e.g. 0.05 for 5% MC change in the sheet).</span>
+        </div>
+        <div class="field field--grow">
+          <label for="speciesHighlight">Highlight species</label>
+          <select id="speciesHighlight" aria-label="Highlight species in table">
+            <option value="">— None —</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="panel table-wrap" aria-label="Results table">
+        <div class="table-scroll">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Material</th>
+                <th scope="col">Quarter</th>
+                <th scope="col">Flat</th>
+                <th scope="col">Movement (quarter)</th>
+                <th scope="col">Movement (flat)</th>
+              </tr>
+            </thead>
+            <tbody id="speciesBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <a
+          class="footer-link"
+          href="https://www.finewoodworking.com/2013/08/29/calculating-for-wood-movement"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Calculating for wood movement — Fine Woodworking</a
+        >
+      </footer>
+    </div>
+    <script src="./app.js" defer></script>
+  </body>
+</html>
