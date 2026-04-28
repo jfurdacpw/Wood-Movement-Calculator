@@ -1,38 +1,36 @@
 # Wood movement calculator
 
-Static calculator that matches the Excel workbook logic: **movement = coefficient × board width (in.) × moisture variance × 100** for quarter- and flat-sawn coefficients per species.
+This tool estimates how much a board **shrinks or swells across its width** when moisture content changes. It uses the same numbers and math as the original spreadsheet.
 
-## GitHub Pages
+## Inputs
 
-1. Push this repository to GitHub.
-2. In the repo on GitHub: **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select your default branch (e.g. `main`) and **/ (root)** so `index.html` is served from the site root.
+- **Board width (in.)** — Nominal width of the board in inches. Wider boards move more in absolute terms (the model scales linearly with width).
+- **Moisture variance** — How much moisture content changes, entered as a **decimal** (for example `0.05` means a five–percentage-point swing in moisture content, matching the spreadsheet’s default).
 
-For a **project site**, the app will be at:
+## Coefficients and grain
 
-`https://<your-username>.github.io/Wood-Movement-Calculator/`
+Each wood has two shrinkage coefficients (from the reference data baked into `species.json`):
 
-All asset links use **relative** paths (`./styles.css`, `./species.json`) so they work under that URL.
+- **Quarter** — Typical movement when growth rings are oriented for **quarter-sawn** stock (movement tied to the smaller, “quarter” coefficient in the sheet).
+- **Flat** — Typical movement for **flat-sawn** stock (the larger coefficient in the sheet).
 
-## Embed in Notion
+Those values are not measured on your specific board; they are **species averages** for planning joinery and gaps.
 
-1. Publish the site using the steps above and confirm the URL loads in a browser.
-2. In Notion, add an **Embed** block and paste the GitHub Pages URL.
-3. If the preview does not update after a deploy, use the embed menu **⋯ → Reload**.
+## Formula
 
-The page is styled for **Notion dark mode** by default (dark background and type). Notion does not tell embedded pages which theme the workspace uses; this keeps the embed visually consistent in dark workspaces.
+For each species row:
 
-## Local preview
+- **Movement (quarter)** = quarter coefficient × board width × moisture variance × **100**
+- **Movement (flat)** = flat coefficient × board width × moisture variance × **100**
 
-From the repo root:
+The result is shown in the same units style as the spreadsheet (movement numbers derived from that product).
 
-```bash
-python3 -m http.server 8080
-```
+## Using the table
 
-Open `http://127.0.0.1:8080/` (a local server is required so `fetch("./species.json")` works).
+The main table lists every species with its coefficients and both movement values. They all update together when you change board width or moisture variance.
 
-## Source
+If you pick a species under **Highlight species**, that row is emphasized in the table and a **summary** above the table repeats that species’s name, coefficients, and movement numbers for quick reading.
 
-Coefficients and formula mirror the original spreadsheet; methodology is described in [Calculating for wood movement](https://www.finewoodworking.com/2013/08/29/calculating-for-wood-movement) (Fine Woodworking).
+## Reference
+
+The approach and coefficient style follow [Calculating for wood movement](https://www.finewoodworking.com/2013/08/29/calculating-for-wood-movement) (Fine Woodworking).
