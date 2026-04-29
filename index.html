@@ -43,18 +43,28 @@
           <span class="hint">Decimal (e.g. 0.05 for 5% MC change in the sheet).</span>
         </div>
         <div class="field field--grow">
-          <label for="speciesHighlight">Highlight species</label>
-          <select id="speciesHighlight" aria-label="Highlight species in table">
-            <option value="">— None —</option>
-          </select>
-          <input
-            type="search"
-            id="speciesSearch"
-            class="species-search"
-            placeholder="Search to filter list…"
-            autocomplete="off"
-            aria-label="Search species to filter highlight list"
-          />
+          <label id="speciesComboboxLabel" for="speciesComboboxInput">Highlight species</label>
+          <div class="species-combobox" id="speciesCombobox">
+            <input
+              type="text"
+              id="speciesComboboxInput"
+              class="species-combobox__input"
+              role="combobox"
+              aria-autocomplete="list"
+              aria-expanded="false"
+              aria-controls="speciesComboboxList"
+              aria-labelledby="speciesComboboxLabel"
+              autocomplete="off"
+              placeholder="Type to search, then pick a species…"
+            />
+            <ul
+              id="speciesComboboxList"
+              class="species-combobox__list"
+              role="listbox"
+              aria-labelledby="speciesComboboxLabel"
+              hidden
+            ></ul>
+          </div>
         </div>
       </section>
 

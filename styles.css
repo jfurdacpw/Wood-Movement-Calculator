@@ -88,9 +88,90 @@ body {
   min-width: 200px;
 }
 
-.species-search {
-  margin-top: 8px;
+.species-combobox {
+  position: relative;
   width: 100%;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 0.12s ease, box-shadow 0.12s ease;
+}
+
+.species-combobox:hover {
+  border-color: var(--border-strong);
+}
+
+.species-combobox:focus-within {
+  border-color: var(--link);
+  box-shadow: 0 0 0 3px var(--focus);
+}
+
+.species-combobox--open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-color: transparent;
+}
+
+.species-combobox__input {
+  display: block;
+  width: 100%;
+  margin: 0;
+  font: inherit;
+  color: var(--text);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius);
+  padding: 8px 10px;
+  outline: none;
+}
+
+.species-combobox--open .species-combobox__input {
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.species-combobox__list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: 20;
+  margin: 0;
+  padding: 4px 0;
+  max-height: min(280px, 40vh);
+  overflow-y: auto;
+  list-style: none;
+  font: inherit;
+  color: var(--text);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-strong);
+  border-top: 1px solid var(--border);
+  border-radius: 0 0 var(--radius) var(--radius);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.species-combobox__list li {
+  padding: 8px 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.species-combobox__list li:hover,
+.species-combobox__list li.is-active {
+  background: var(--row-highlight);
+}
+
+.species-combobox__list .species-combobox__empty,
+.species-combobox__list .species-combobox__trunc {
+  cursor: default;
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+}
+
+.species-combobox__list .species-combobox__empty:hover,
+.species-combobox__list .species-combobox__trunc:hover {
+  background: transparent;
 }
 
 .field label {
@@ -107,9 +188,7 @@ body {
   line-height: 1.35;
 }
 
-input[type="number"],
-input[type="search"],
-select {
+input[type="number"] {
   font: inherit;
   color: var(--text);
   background: var(--bg-elevated);
@@ -120,15 +199,11 @@ select {
   transition: border-color 0.12s ease, box-shadow 0.12s ease;
 }
 
-input[type="number"]:hover,
-input[type="search"]:hover,
-select:hover {
+input[type="number"]:hover {
   border-color: var(--border-strong);
 }
 
-input[type="number"]:focus,
-input[type="search"]:focus,
-select:focus {
+input[type="number"]:focus {
   border-color: var(--link);
   box-shadow: 0 0 0 3px var(--focus);
 }

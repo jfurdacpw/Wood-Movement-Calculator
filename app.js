@@ -4,10 +4,24 @@
   /** @type {{ name: string; quarter: number; flat: number }[]} */
   let species = [];
 
+  /** @type {number | null} global species index when user picked from list */
+  let highlightedSpeciesIndex = null;
+
+  /** Indices currently shown in the dropdown (subset of species, in order) */
+  let displayedSpeciesIndices = [];
+
+  /** Keyboard highlight within displayedSpeciesIndices */
+  let listActivePos = -1;
+
+  let lockInputSync = false;
+
+  const LIST_MAX = 200;
+
   const boardWidthEl = document.getElementById("boardWidth");
   const moistureEl = document.getElementById("moistureVariance");
-  const highlightEl = document.getElementById("speciesHighlight");
-  const speciesSearchEl = document.getElementById("speciesSearch");
+  const comboInput = document.getElementById("speciesComboboxInput");
+  const comboList = document.getElementById("speciesComboboxList");
+  const comboRoot = document.getElementById("speciesCombobox");
   const tbody = document.getElementById("speciesBody");
   const highlightSummaryEl = document.getElementById("highlightSummary");
   const highlightSummaryNameEl = document.getElementById("highlightSummaryName");
@@ -99,9 +113,28 @@
     };
   }
 
-  function updateHighlightSummary(w, m, highlight) {
-    const idx = highlight === "" ? NaN : Number(highlight);
-    const row = Number.isInteger(idx) && idx >= 0 && idx < species.length ? species[idx] : null;
+  function setListOpen(open) {
+    comboList.hidden = !open;
+    comboInput.setAttribute("aria-expanded", open ? "true" : "false");
+    comboRoot.classList.toggle("species-combobox--open", open);
+  }
+
+  function closeList() {
+    setListOpen(false);
+    listActivePos = -1;
+  }
+
+  function openList() {
+    setListOpen(true);
+  }
+
+  function updateHighlightSummary(w, m) {
+    const row =
+      highlightedSpeciesIndex !== null &&
+      highlightedSpeciesIndex >= 0 &&
+      highlightedSpeciesIndex < species.length
+        ? species[highlightedSpeciesIndex]
+        : null;
     if (!row) {
       highlightSummaryEl.hidden = true;
       return;
@@ -118,16 +151,15 @@
   function render() {
     const w = parsePositiveNumber(boardWidthEl, 72);
     const m = parsePositiveNumber(moistureEl, 0.05);
-    const highlight = highlightEl.value;
 
-    updateHighlightSummary(w, m, highlight);
+    updateHighlightSummary(w, m);
 
     const frag = document.createDocumentFragment();
     for (let i = 0; i < species.length; i++) {
       const row = species[i];
       const { quarter: mq, flat: mf } = movement(row.quarter, row.flat, w, m);
       const tr = document.createElement("tr");
-      if (highlight !== "" && Number(highlight) === i) {
+      if (highlightedSpeciesIndex === i) {
         tr.classList.add("is-highlighted");
       }
       const nameTd = document.createElement("td");
@@ -150,46 +182,141 @@
     tbody.replaceChildren(frag);
   }
 
-  function highlightFilterQuery() {
-    if (!speciesSearchEl) return "";
-    return String(speciesSearchEl.value).trim().toLowerCase();
+  function collectMatchingIndices() {
+    const q = comboInput.value.trim().toLowerCase();
+    const out = [];
+    for (let i = 0; i < species.length; i++) {
+      if (!q || species[i].name.toLowerCase().includes(q)) {
+        out.push(i);
+      }
+    }
+    return out;
   }
 
-  /**
-   * Rebuilds highlight select options. Optional filter narrows by species name (substring, case-insensitive).
-   * Option values remain global species indices so the table and summary stay aligned.
-   * @returns {boolean} true if the previous selection is still valid after rebuild
-   */
-  function fillHighlightOptions() {
-    const q = highlightFilterQuery();
-    const current = highlightEl.value;
+  function syncListActiveClass() {
+    const items = comboList.querySelectorAll("li[data-index]");
+    for (let p = 0; p < items.length; p++) {
+      const li = items[p];
+      if (p === listActivePos) {
+        li.classList.add("is-active");
+        li.setAttribute("aria-selected", "true");
+        li.scrollIntoView({ block: "nearest" });
+      } else {
+        li.classList.remove("is-active");
+        li.removeAttribute("aria-selected");
+      }
+    }
+  }
+
+  function rebuildSpeciesList() {
+    const allMatch = collectMatchingIndices();
+    const truncated = allMatch.length > LIST_MAX;
+    displayedSpeciesIndices = truncated ? allMatch.slice(0, LIST_MAX) : allMatch;
+
+    comboList.replaceChildren();
     const frag = document.createDocumentFragment();
-    const none = document.createElement("option");
-    none.value = "";
-    none.textContent = "— None —";
-    frag.appendChild(none);
 
-    let keptSelection = false;
-    for (let i = 0; i < species.length; i++) {
-      if (q && !species[i].name.toLowerCase().includes(q)) continue;
-      const opt = document.createElement("option");
-      opt.value = String(i);
-      opt.textContent = species[i].name;
-      frag.appendChild(opt);
-      if (current !== "" && current === String(i)) keptSelection = true;
+    if (displayedSpeciesIndices.length === 0) {
+      const li = document.createElement("li");
+      li.className = "species-combobox__empty";
+      li.role = "presentation";
+      li.textContent = "No matching species";
+      frag.appendChild(li);
+      listActivePos = -1;
+    } else {
+      for (let p = 0; p < displayedSpeciesIndices.length; p++) {
+        const i = displayedSpeciesIndices[p];
+        const li = document.createElement("li");
+        li.role = "option";
+        li.dataset.index = String(i);
+        li.textContent = species[i].name;
+        li.addEventListener("mousedown", function (e) {
+          e.preventDefault();
+          selectSpeciesByIndex(i);
+        });
+        frag.appendChild(li);
+      }
+      if (truncated) {
+        const li = document.createElement("li");
+        li.className = "species-combobox__trunc";
+        li.role = "presentation";
+        li.textContent =
+          "Showing first " +
+          LIST_MAX +
+          " of " +
+          allMatch.length +
+          " matches — keep typing to narrow";
+        frag.appendChild(li);
+      }
+      listActivePos = 0;
     }
 
-    highlightEl.replaceChildren(frag);
-    if (current !== "" && keptSelection) {
-      highlightEl.value = current;
-      return true;
+    comboList.appendChild(frag);
+    if (displayedSpeciesIndices.length > 0) {
+      syncListActiveClass();
     }
-    if (current !== "") {
-      highlightEl.value = "";
-      return false;
+  }
+
+  function selectSpeciesByIndex(i) {
+    if (i < 0 || i >= species.length) return;
+    lockInputSync = true;
+    highlightedSpeciesIndex = i;
+    comboInput.value = species[i].name;
+    lockInputSync = false;
+    closeList();
+    render();
+  }
+
+  function onComboInput() {
+    if (lockInputSync) return;
+    if (highlightedSpeciesIndex !== null) {
+      const sel = species[highlightedSpeciesIndex];
+      if (sel && comboInput.value.trim().toLowerCase() === sel.name.toLowerCase()) {
+        rebuildSpeciesList();
+        openList();
+        return;
+      }
+      highlightedSpeciesIndex = null;
+      render();
     }
-    highlightEl.value = "";
-    return true;
+    rebuildSpeciesList();
+    openList();
+  }
+
+  function onComboKeydown(e) {
+    const items = comboList.querySelectorAll("li[data-index]");
+    if (!comboList.hidden && items.length > 0) {
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        listActivePos = Math.min(listActivePos + 1, items.length - 1);
+        syncListActiveClass();
+        return;
+      }
+      if (e.key === "ArrowUp") {
+        e.preventDefault();
+        listActivePos = Math.max(listActivePos - 1, 0);
+        syncListActiveClass();
+        return;
+      }
+      if (e.key === "Enter") {
+        e.preventDefault();
+        if (listActivePos >= 0 && listActivePos < displayedSpeciesIndices.length) {
+          selectSpeciesByIndex(displayedSpeciesIndices[listActivePos]);
+        }
+        return;
+      }
+      if (e.key === "Escape") {
+        e.preventDefault();
+        closeList();
+        return;
+      }
+    }
+  }
+
+  function onDocumentPointerDown(e) {
+    if (!comboRoot.contains(e.target)) {
+      closeList();
+    }
   }
 
   async function init() {
@@ -200,24 +327,17 @@
     if (species.length === 0) {
       throw new Error("species.json has no valid species rows (need name + quarter + flat)");
     }
-    fillHighlightOptions();
+
     render();
 
     const scheduleRender = debounce(render, 120);
     boardWidthEl.addEventListener("input", scheduleRender);
     moistureEl.addEventListener("input", scheduleRender);
-    highlightEl.addEventListener("change", render);
 
-    const scheduleFilter = debounce(function () {
-      const prev = highlightEl.value;
-      const stillValid = fillHighlightOptions();
-      if (prev !== "" && !stillValid) {
-        render();
-      }
-    }, 80);
-    if (speciesSearchEl) {
-      speciesSearchEl.addEventListener("input", scheduleFilter);
-    }
+    comboInput.addEventListener("input", onComboInput);
+    comboInput.addEventListener("keydown", onComboKeydown);
+
+    document.addEventListener("pointerdown", onDocumentPointerDown);
   }
 
   init().catch(function (err) {
