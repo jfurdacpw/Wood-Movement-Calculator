@@ -53,13 +53,6 @@ body {
   letter-spacing: -0.02em;
 }
 
-.lede {
-  margin: 0;
-  font-size: 0.8125rem;
-  color: var(--text-muted);
-  max-width: 52ch;
-}
-
 .panel {
   background: var(--bg-panel);
   border: 1px solid var(--border);
